@@ -11,3 +11,8 @@ Create a QR for a Dungeons and Dragons Monster
 [WHEN] I click the search button 
 [THEN] I am directed to a page with the monster's stats and a QR code that links back to the monster's page.
 ```
+## Project Description
+---
+On pageload, the user will be presented with project title (PocketMonster), brief description of its function (maybe a snippet of background on D&D?), and a form with dropdown boxes for monster selection criteria.
+
+Upon submission of the form, the user will be directed to a new page with a monster statblock (layout designed by us), and a QR code that links to the original statblock hosted on the API.
