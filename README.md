@@ -16,3 +16,37 @@ Create a QR for a Dungeons and Dragons Monster
 On pageload, the user will be presented with project title (PocketMonster), brief description of its function (maybe a snippet of background on D&D?), and a form with dropdown boxes for monster selection criteria.
 
 Upon submission of the form, the user will be directed to a new page with a monster statblock (layout designed by us), and a QR code that links to the original statblock hosted on the API.
+
+
+- [PocketMonster Git Hub Repository](https://github.com/areitan/PocketMonster)
+- [PocketMonster Deployed Application](https://areitan.github.io/*******)
+
+
+PocketMonster Dashboard Screenshot
+
+![PocketMonster Screenshot](./assets/images/*******)png)
+
+
+## Process
+
+
+
+### index.html
+
+
+
+### script.js
+
+
+
+### style.css
+
+
+
+
+## How To Contribute
+
+
+
+
+## Credits
