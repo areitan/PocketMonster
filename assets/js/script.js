@@ -1,3 +1,4 @@
+
 //Initial HTML UI Elements//
 var searchFormEl = document.querySelector("#search-form");
 var searchButtonEl = document.getElementById("#search-button");
@@ -44,4 +45,5 @@ console.log(monsterSpecs);
 
     getMonster();
 });
+
 
