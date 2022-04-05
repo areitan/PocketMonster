@@ -29,6 +29,15 @@ PocketMonster Dashboard Screenshot
 
 ## Process
 
+### Wireframing
+
+1. After brainstorming for our project idea and deciding on 2 API's, we drew out some simple sketches of our potential site.
+
+
+### Kanban board
+
+1. We decided to use a Kanban Board to help organize and assign tasks.
+2. We divided the Kanban Board into 4 sections. The Icebox is the container for things we'd like to add after we have our minimum viable product. We have a To-Do container. We have items that are in process as well as a section for items that are completed.
 
 
 ### index.html
