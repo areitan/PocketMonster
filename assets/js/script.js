@@ -1,1 +1,3 @@
-console.log('Test')
+
+// Search Button variable
+var searchButton = document.getElementById('searchButton');
