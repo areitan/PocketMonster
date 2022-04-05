@@ -12,7 +12,6 @@ var challengeSelect = document.querySelector("#select-cr");
 var typeSelect = document.querySelector("#select-type");
 
 
-
 //Search Open5e API//
     //search is centered around "type", need to create "if/else" for type === null
 var sourceURL = "https://api.open5e.com/monsters/?type=" + monsterSpecs[2];
@@ -26,7 +25,8 @@ function getMonster() {
         .then(function (data) {
     console.log(data)
     monsterArray = data
-        })}
+        })
+    }
 
 //Search Handler//
 submitBtnEl.addEventListener("click", function(event) {
