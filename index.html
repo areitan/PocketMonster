@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="./assets/css/style.css" />
-  <title>PocketMonster</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>PocketMonster</title>
 </head>
 
 <body>
@@ -17,7 +17,7 @@
 
     <main class="">
         <form id="user-form" class="">
-            <select id="" class="">
+            <select id="rating" class="">
                 <option value="" disabled="" selected="">Challenge Rating</option>
                 <option value="0">0</option>
                 <option value="oneeigth">1/8</option>
@@ -54,7 +54,7 @@
                 <option value="29">29</option>
                 <option value="30">30</option>
             </select>
-            <select id="" class="">
+            <select id="type" class="">
                 <option value="" disabled="" selected="">Type</option>
                 <option value="">Aberration</option>
                 <option value="">Beast</option>
@@ -70,7 +70,7 @@
                 <option value="">Plant</option>
                 <option value="">Undead</option>
             </select>
-            <select id="" class="">
+            <select id="size" class="">
                 <option value="" disabled="" selected="">Size</option>
                 <option value="tiny">Tiny</option>
                 <option value="small">Small</option>
@@ -78,19 +78,29 @@
                 <option value="large">Large</option>
                 <option value="Huge">Huge</option>
             </select>
-            <select id="" class="">
+            <select id="alignment" class="">
                 <option value="" disabled="" selected="">Alignment</option>
                 <option value="lawfulGood">Lawful Good</option>
                 <option value="lawfulNeutral">Lawful Neutral</option>
                 <option value="lawfulEvil">Lawful Evil</option>
                 <option value="chaoticGood">Chaotic Good</option>
                 <option value="chaoticNeutral">Chaotic Neutral</option>
-                <option value="chaoticEvil">Chaotic Evil</option><option value="neutralGood">Neutral Good</option>
+                <option value="chaoticEvil">Chaotic Evil</option>
+                <option value="neutralGood">Neutral Good</option>
                 <option value="trueNeutral">True Neutral</option>
                 <option value="neutralEvil">Neutral Evil</option>
             </select>
             <button id="searchButton" class="">Search</button>
         </form>
+        <div class="card">
+            <h2>Last Monster</h2>
+            <p>Rating: <span id="savedRating"></span></p>
+            <p>Type: <span id="savedType"></span></p>
+            <p>Size: <span id="savedSize"></span></p>
+            <p>Alignment: <span id="savedAlignment"></span></p>
+        </div>
     </main>
+    <script src="./assets/js/randomizedresults.js"></script>
 </body>
+
 </html>
