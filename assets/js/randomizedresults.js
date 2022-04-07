@@ -12,8 +12,8 @@ function saveLastMonster() {
   var monster = {
     rating: rating.value,
     type: type.value,
-    size: type.value,
-    alignment: type.value
+    size: size.value,
+    alignment: alignment.value
   };
   // Store object in local storage and convert to string
   localStorage.setItem("monster", JSON.stringify(monster));
@@ -33,7 +33,7 @@ function LastMonster() {
   }
 }
 
-saveButton.addEventListener("click", function(event) {
+searchButton.addEventListener("click", function(event) {
 event.preventDefault();
 saveLastMonster();
 LastMonster();
