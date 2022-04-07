@@ -3,7 +3,7 @@ var rating = document.getElementById("rating");
 var type = document.getElementById("type");
 var size = document.getElementById("size");
 var alignment = document.getElementById("alignment");
-var searchButton = document.getElementById("searchButton");
+var searchButton = document.getElementById("search-button");
 
 // Add in last monster URL to saved object
 
@@ -47,3 +47,4 @@ init();
 
 //  Calls init
 init();
+
