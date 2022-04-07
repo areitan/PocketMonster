@@ -1,4 +1,4 @@
-// store monster array
+// store monster stats
 var rating = document.getElementById("rating");
 var type = document.getElementById("type");
 var size = document.getElementById("size");
@@ -43,8 +43,6 @@ LastMonster();
 function init() {
   LastMonster();
 }
-init();
 
-//  Calls init
 init();
 
