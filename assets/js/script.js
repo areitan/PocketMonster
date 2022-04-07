@@ -23,8 +23,13 @@ function getMonster() {
         return response.json();
         })
         .then(function (data) {
-    console.log(data)
-    monsterArray = data
+        monsterArray = data.results
+        console.log("---monsterArray---")
+        console.log(monsterArray)
+        })
+        .then(function (randomMonster) {
+            var randomMonster = monsterArray[Math.floor(Math.random()*monsterArray.length)];
+            console.log(randomMonster.slug);
         })
     }
 
