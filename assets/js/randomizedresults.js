@@ -1,21 +1,48 @@
+// store monster stats
+var rating = document.getElementById("rating");
+var type = document.getElementById("type");
+var size = document.getElementById("size");
+var alignment = document.getElementById("alignment");
+var searchButton = document.getElementById("search-button");
 
+// Add in last monster URL to saved object
 
-// store monster array
-function storeInput1() {
-    var Input1value = document.getElementById('inou').value;
-    localStorage.setItem("key", value);
+function saveLastMonster() {
+  // Save search form data as an object
+  var monster = {
+    rating: rating.value,
+    type: type.value,
+    size: size.value,
+    alignment: alignment.value
+  };
+  // Store object in local storage and convert to string
+  localStorage.setItem("monster", JSON.stringify(monster));
 }
 
-// Event listener  storing item 
-btn9.addEventListener("click", storeInput1);
+function LastMonster() {
+  // Use JSON.parse() to create object
+  var lastMonster = JSON.parse(localStorage.getItem("monster"));
+  
+  if (lastMonster !== null) {
+  document.getElementById("savedRating").innerHTML = lastMonster.rating;
+  document.getElementById("savedType").innerHTML = lastMonster.type;
+  document.getElementById("savedSize").innerHTML = lastMonster.size;
+  document.getElementById("savedAlignment").innerHTML = lastMonster.alignment;
+  } else {
+    return;
+  }
+}
 
+searchButton.addEventListener("click", function(event) {
+event.preventDefault();
+saveLastMonster();
+LastMonster();
+});
 
-// page load event loads what's in local storage for each time-block
+// The init() function on page load 
 function init() {
-    var newInput1 = localStorage.getItem("key");
-    task9.append(newInput1);
-   
+  LastMonster();
 }
 
-//  Calls init function
 init();
+
