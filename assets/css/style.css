@@ -49,11 +49,15 @@
     border-top: 28.8675px solid red;
   }
 
+  aside {
+      display: flex;
+      
+  }
+
   footer {
       display: flex;
-      flex-direction:       ;
+      flex-direction: column;
       padding-bottom: 10px;
       color: aliceblue;
       background-color: black;
   }
-  
