@@ -2,13 +2,15 @@
 <html lang="en">
 
 <head>
-   
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="./assets/css/style.css" />
-  <title>PocketMonster</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Compressed CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>PocketMonster</title>
 </head>
 
 <body>
@@ -57,7 +59,7 @@
                 <option value="29">29</option>
                 <option value="30">30</option>
 
-            
+
 
             </select>
             <select id="type" class="">
@@ -96,9 +98,9 @@
                 <option value="True Neutral">True Neutral</option>
                 <option value="Neutral Evil">Neutral Evil</option>
             </select>
-            <button id="search-button" class="">Search</button>
+            <button id="search-button" class="button">Search</button>
         </form>
-        <div class="card">
+        <div class="card grid-x">
             <h2>Last Monster Encountered:</h2>
             <p>Rating: <span id="savedRating"></span></p>
             <p>Type: <span id="savedType"></span></p>
@@ -106,6 +108,8 @@
             <p>Alignment: <span id="savedAlignment"></span></p>
         </div>
     </main>
+    <!-- Compressed JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/foundation.min.js" crossorigin="anonymous"></script>
     <script src="./assets/js/randomizedresults.js"></script>
 </body>
 
