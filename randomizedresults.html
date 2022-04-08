@@ -6,31 +6,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-  <link rel="stylesheet" href="./assets/css/style.css" />
+  <!-- <link rel="stylesheet" href="./assets/css/style.css" /> -->
   <title>PocketMonster</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation-prototype.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 
   <main class="">
-    <h1 class="monsterTitle">FILLER MONSTER TITLE</h1>
-    <div class="armorClass">AC</div>
-    <div class="hitPoints">HP</div>
-    <div class="speed">Speed</div>
-    <div class="hitDice">Hit Dice</div>
-    <div class="challengeRating">Challenge Rating:</div>
-    <div class="type">Type:</div>
-    <div class="size">Size:</div>
-    <div class="alignment">Alignment</div>
+    <h1 class="monsterTitle text-center">FILLER MONSTER TITLE</h1>
+    <div class="grid-container">
+      <div class="medium-9 cell">
+        <div class="armorClass">AC</div>
+        <div class="hitPoints">HP</div>
+        <div class="speed">Speed</div>
+        <div class="hitDice">Hit Dice</div>
+        <div class="challengeRating">Challenge Rating:</div>
+        <div class="type">Type:</div>
+        <div class="size">Size:</div>
+        <div class="alignment">Alignment</div>
+      </div>
+      <aside class="stats medium-3 cell sticky-container">
+        <div class="strength">STR</div>
+        <div class="dexterity">DEX</div>
+        <div class="constitution">CON</div>
+        <div class="charisma">CHA</div>
+        <div class="intelligence">INT</div>
+        <div class="wisdom">WIS</div>
+      </aside>
+    </div>
+    
 
-    <aside class="stats">
-      <div class="strength">STR</div>
-      <div class="dexterity">DEX</div>
-      <div class="constitution">CON</div>
-      <div class="charisma">CHA</div>
-      <div class="intelligence">INT</div>
-      <div class="wisdom">WIS</div>
-    </aside>
+    
     <div class="card">
       <h1>Search History</h1>
       <ul id="monsterHistory"></ul>
