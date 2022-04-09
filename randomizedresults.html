@@ -5,21 +5,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-  <!-- <link rel="stylesheet" href="./assets/css/style.css" /> -->
   <title>PocketMonster</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation-prototype.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet" type="text/css">
+  <!-- Compressed CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css"
+  crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body>
-
-  <main class="grid-container">
-    <h1 class="monsterTitle text-center">FILLER MONSTER TITLE</h1>
+<body class="background">
+  <header class="relative text-center bg-white z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32"><h1 class="monsterTitle text-center">FILLER MONSTER TITLE</h1></header>
     <!--MAIN INFORMATION-->
-    <div class="grid-container text-center card">
+  <main class="main">
+    <div class="grid-container text-center card translucent-form-overlay">
       <div class="medium-9 cell grid-x">
         <div class="ac grid-container">
           <h4 class="">AC</h4>
@@ -57,7 +54,7 @@
       </div>
 
       <!-- STAT BLOCK -->
-      <div class="card">
+      <div class="grid-container text-center card translucent-form-overlay">
         <h2 class="text-center">STATS</h2>
         <div class="grid-container grid-x">
           <div class="grid-container">
@@ -79,13 +76,13 @@
         </div>
       </div>
     <!-- SEARCH HISTORY/LOCAL STORAGE -->
-    <div class="card">
+    <div class="grid-container text-center card translucent-form-overlay">
       <h3>Search History</h3>
       <ul id="monsterHistory"></ul>
     </div>
   </main>
   
-  <footer class="footer text-center position-bottom">PocketMonster</footer>
+  <footer class="text-center position-bottom relative bg-white z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">PocketMonster</footer>
 
 </body>
 <script src="./assets/js/randomizedresults.js"></script>
