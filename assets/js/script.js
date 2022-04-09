@@ -5,43 +5,127 @@ var recentListEl = document.querySelector("#search-recents");
 var favoriteListEl = document.querySelector("#search-favorites");
 
 //Attribute Selection//
-var monsterSpecs = [];
-var monsterArray = [];
 var alignmentSelect = document.querySelector("#select-alignment");
 var challengeSelect = document.querySelector("#select-cr");
+var sizeSelect = document.querySelector("#select-size");
 var typeSelect = document.querySelector("#select-type");
 
+//Empty Arrays For Functions//
+var monsterArray = [];
+var monsterParameters = [];
+var monsterResult = [];
+var monsterSpecs = { 
+    alignment: "",
+    challenge_rating: "",
+    size: "",
+    type: "",
+    }
 
-//Search Open5e API//
-    //search is centered around "type", need to create "if/else" for type === null
-var sourceURL = "https://api.open5e.com/monsters/?type=" + monsterSpecs[2];
+//Open5e API Source URL//
+var sourceURL = "https://api.open5e.com/monsters/?type=" + monsterSpecs.type;
 
+//Fetch & Search Open5e API//
 function getMonster() {
-
+    //Conditional URL Generation To Allow Empty Parameters//
+    if (monsterSpecs.type == "" && monsterSpecs.challenge_rating !== "") {
+        sourceURL = "https://api.open5e.com/monsters/?challenge_rating=" + monsterSpecs.challenge_rating;
+        console.log("Sort by challenge_rating", sourceURL);
+    }
+    else if (monsterSpecs.type == "" && monsterSpecs.challenge_rating == "" && monsterSpecs.alignment !== "") {
+        sourceURL = "https://api.open5e.com/monsters/?alignment=" + monsterSpecs.alignment.replace(" ", "_");
+        console.log("Sort by alignment", sourceURL);
+    }
+    else if (monsterSpecs.type == "" && monsterSpecs.challenge_rating == "" && monsterSpecs.alignment == "" && monsterSpecs.size !== "") {
+        sourceURL = "https://api.open5e.com/monsters/?size=" + monsterSpecs.size;
+        console.log("Sort by size", sourceURL);
+    }
+    else {
+        console.log("Sort by type", sourceURL);
+    }
+    
+    //Fetch API//
     fetch(sourceURL)
     .then(function (response) {
         return response.json();
         })
-        .then(function (data) {
-    console.log(data)
-    monsterArray = data
+
+    //Store Monster Array//
+    .then(function (data) {
+    monsterArray = data.results
+    console.log("monsterArray", monsterArray)
+    })
+
+    //Pick Random Monster//
+    .then(function (randomMonster) {
+        var randomMonster = monsterArray[Math.floor(Math.random()*monsterArray.length)];
+        console.log("randomMonster", randomMonster.slug, randomMonster);
+        monsterResult = randomMonster
         })
+
+    //Save & Print Local Storage//
+    .then(saveLastMonster)
+    .then(saveLastSearch)
+    .then(printLastMonster)
+    .then(printLastSearch)
+}
+
+//Local Storage Functions//
+function saveLastMonster() {
+    localStorage.setItem("monster", JSON.stringify(monsterResult));
     }
 
-//Search Handler//
-searchButtonEl.addEventListener("click", function(event) {
-    event.preventDefault();
+function saveLastSearch() {
+    var search = {
+        alignment: alignmentSelect.value,
+        challenge_rating: challengeSelect.value,
+        size: sizeSelect.value,
+        type: typeSelect.value
+        };
+    localStorage.setItem("search", JSON.stringify(search));
+    }
 
+function printLastMonster() {
+    ///////////////
+    }
+function printLastSearch() {
+    var lastSearch = JSON.parse(localStorage.getItem("search"));
+    if (lastSearch !== null) {
+        document.getElementById("savedRating").innerHTML = lastSearch.challenge_rating;
+        document.getElementById("savedType").innerHTML = lastSearch.type;
+        document.getElementById("savedSize").innerHTML = lastSearch.size;
+        document.getElementById("savedAlignment").innerHTML = lastSearch.alignment;
+    } else {
+      return;
+    }}
+
+//Search Button Handler//
+document.addEventListener("click", clickHandler);
+function clickHandler(event) {
+    event.preventDefault();
+    targetEl = event.target;
+    if (targetEl.matches("button")) {
+
+    //Pass Values Into Variables//
 var monsterAlignment = alignmentSelect.value;
 var monsterChallenge = challengeSelect.value;
+var monsterSize = sizeSelect.value;
 var monsterType = typeSelect.value;
+    
+    //Pass Variables Into Array//
+    monsterSpecs.alignment = monsterAlignment
+    monsterSpecs.challenge_rating = monsterChallenge
+    monsterSpecs.size = monsterSize
+    monsterSpecs.type = monsterType
 
-monsterSpecs.push(monsterAlignment);
-monsterSpecs.push(monsterChallenge);
-monsterSpecs.push(monsterType);
-
-console.log(monsterSpecs);
-
+    //Run Search//
     getMonster();
-});
+    console.log("monsterSpecs", monsterSpecs);
+        }
+    };
 
+//Page Load// 
+function init() {
+    printLastSearch();
+  }
+  
+  init();
