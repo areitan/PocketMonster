@@ -66,8 +66,8 @@ function getMonster() {
     //Save & Print Local Storage//
     .then(saveLastMonster)
     .then(saveLastSearch)
-    .then(printLastMonster)
     .then(printLastSearch)
+    .then(document.location = "./randomizedresults.html")
 }
 
 //Local Storage Functions//
@@ -85,9 +85,6 @@ function saveLastSearch() {
     localStorage.setItem("search", JSON.stringify(search));
     }
 
-function printLastMonster() {
-    ///////////////
-    }
 function printLastSearch() {
     var lastSearch = JSON.parse(localStorage.getItem("search"));
     if (lastSearch !== null) {
