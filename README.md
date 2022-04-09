@@ -20,13 +20,16 @@ Upon submission of the form, the user will be directed to a new page with a mons
 
 
 - [PocketMonster Git Hub Repository](https://github.com/areitan/PocketMonster)
-- [PocketMonster Deployed Application](https://areitan.github.io/*******)
+- [PocketMonster Deployed Application](https://areitan.github.io/PocketMonster/)
 
 
 PocketMonster Initial Page Screenshot
 
 ![PocketMonster Screenshot](./assets/images/index_screenshot.png)
 
+PocketMonster Results Page Screenshot
+
+![PocketMonster Screenshot](./assets/images/randomizedresults_screenshot.png)
 
 ## Process
 
@@ -48,7 +51,7 @@ PocketMonster Initial Page Screenshot
 ### index.html and randomizedresults.html
 
 1. We added id's to the inputs and other areas of the ```HTML``` we wanted our ```.js``` file to interact with.
-2. We added Zurb Foundation classes to structure our page
+2. We added Zurb Foundation classes to structure our page.
 3. Foundation had a building block template we used to create the translucent effect on the option boxes and the last monster encountered section.
 
 
