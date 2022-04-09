@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PocketMonster</title>
+  <!-- Compressed CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css"
+  crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body class="background">
+  <header class="relative text-center bg-white z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32"><h1 class="monsterTitle text-center"></h1></header>
+    <!--MAIN INFORMATION-->
+  <main class="main">
+    <div class="grid-container text-center card translucent-form-overlay">
+      <div class="medium-9 cell grid-x">
+        <div class="ac grid-container">
+          <h4 class="">AC</h4>
+          <div class="armorClass text-center"></div>
+        </div>
+        <div class="hp grid-container">
+          <h4 class=""> HP</h4>
+          <div class="hitPoints text-center"></div>
+        </div>
+        <div class="ac grid-container">
+          <h4 class="">Speed:</h4>
+          <div class="speed text-center"></div>
+        </div>
+        <div class="hd grid-container">
+          <h4 class="">Hit Dice:</h4>
+          <div class="hitDice text-center"></div>
+        </div>
+        <div class="cr grid-container">
+          <h4 class="">Challenge Rating:</h4>
+          <div class="challengeRating text-center"></div>
+        </div>
+        <div class="cr grid-container">
+          <h4 class="">Type:</h4>
+          <div class="type text-center"></div>
+        </div>
+        <div class="cr grid-container">
+          <h4 class="">Size:</h4>
+          <div class="size text-center"></div>
+        </div>
+        <div class="cr grid-container">
+          <h4 class="">Alignment:</h4>
+          <div class="alignment text-center"></div>
+        </div>
+        </div>
+      </div>
+
+      <!-- STAT BLOCK -->
+      <div class="grid-container text-center card translucent-form-overlay">
+        <h2 class="text-center">STATS</h2>
+        <div class="grid-container grid-x">
+          <div class="grid-container">
+            <div class="strength-text">STR</div>
+            <div class="dexterity-text">DEX</div>
+            <div class="constitution-text">CON</div>
+            <div class="charisma-text">CHA</div>
+            <div class="intelligence-text">INT</div>
+            <div class="wisdom-text">WIS</div>
+          </div>
+          <div class="grid-container">
+            <div class="strength"></div>
+            <div class="dexterity"></div>
+            <div class="constitution"></div>
+            <div class="charisma"></div>
+            <div class="intelligence"></div>
+            <div class="wisdom"></div>
+          </div>
+        </div>
+      </div>
+      <img class="" id="qr" src="">
+    <!-- SEARCH HISTORY/LOCAL STORAGE -->
+    <div class="grid-container text-center card translucent-form-overlay">
+      <h3>Search History</h3>
+      <ul id="monsterHistory"></ul>
+    </div>
+  </main>
+  
+  <footer class="orbit-caption text-center">PocketMonster</footer>
+
+</body>
+<script src="./assets/js/randomizedresults.js"></script>
+<script src="./assets/js/script.js"></script>
+</html>
