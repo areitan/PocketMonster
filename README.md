@@ -23,9 +23,9 @@ Upon submission of the form, the user will be directed to a new page with a mons
 - [PocketMonster Deployed Application](https://areitan.github.io/*******)
 
 
-PocketMonster Dashboard Screenshot
+PocketMonster Initial Page Screenshot
 
-![PocketMonster Screenshot](./assets/images/*******)png)
+![PocketMonster Screenshot](./assets/images/index_screenshot.png)
 
 
 ## Process
@@ -40,9 +40,9 @@ PocketMonster Dashboard Screenshot
 1. We decided to use a Kanban Board to help organize and assign tasks.
 2. We divided the Kanban Board into 4 sections
     * The Icebox is the container for things we'd like to add after we have our minimum viable product. 
-    * We have a To-Do container where tasks are waiting to be assigned. 
-    * We have items that are in process and assigned.
-    * We have a section for items that we feel are completed.
+    * The To-Do container where tasks are waiting to be assigned. 
+    * The In-process container is for things we're working on and that are assigned.
+    * The Completed container is for items that we feel are complete at t his point.
 
 
 ### index.html and randomizedresults.html
