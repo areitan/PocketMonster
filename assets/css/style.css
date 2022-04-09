@@ -1,0 +1,41 @@
+/* Sets background image of initial page */
+.background {
+    background-image: url("https://pixabay.com/get/g3be7be38660775ff0c4601d2a1695a24229d8608df6fb4e70556e67d21e2987872ee54e708a524904a916c2520510e2f6294e57aa45982c2b823ee7f1d945faa724ef15161e0283f48fd5ada634a3411_1920.jpg");
+
+}
+
+h1, h4 {
+    color: aliceblue;
+}
+
+/* controls form overlay */
+.translucent-form-overlay {
+    max-width: 500px;
+    width: 100%;
+    background-color: rgba(54, 54, 54, 0.8);
+    padding: 20px;
+    color: #fefefe;
+  }
+  
+  .translucent-form-overlay .columns.row {
+    display: block;
+  }
+  
+  
+  .translucent-form-overlay input, .translucent-form-overlay select {
+    color: #8a8a8a;
+  }
+  
+  .translucent-form-overlay input::-webkit-input-placeholder {
+    color: #8a8a8a;
+  }
+  
+  .translucent-form-overlay input:-ms-input-placeholder {
+    color: #8a8a8a;
+  }
+  
+  .translucent-form-overlay input::placeholder {
+    color: #8a8a8a;
+  }
+  
+  

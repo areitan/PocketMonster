@@ -13,17 +13,18 @@
     <title>PocketMonster</title>
 </head>
 
-<body>
+<body class="background">
 
     <!-- Header -->
-    <header class="relative text-center z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
-        <h1 class="mt">PocketMonster</h1>
+    <header class="relative text-center bg-white z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+        <h1>PocketMonster</h1>
+        <br/>
     </header>
 
-    <main class="grid-container margin-3">
-        <h4 class="subheader text-center">Select attributes for a monster from the options below and click "Encounter".</h4>
+    <main>
+        <h4 class="text-center">Select attributes for a monster from the options below and click "Encounter".</h4>
         <!-- Attribute entry form -->
-        <form id="user-form" class="text-center ">
+        <form id="user-form" class="grid-container text-center translucent-form-overlay">
             <!-- Challenge Rating Option Box -->
             <div class="row">
                 <select id="rating" class="text-center">
@@ -109,13 +110,16 @@
                     <option value="Neutral Evil">Neutral Evil</option>
                 </select>
             </div>
+            <br />
             <!-- Search Button -->
             <div class="row">
                 <button id="search-button" class="large button">Encounter</button>
             </div>
         </form>
+        <br />
+        <br />
         <!-- Local Storage Last Attributes Searched -->
-        <div class="card grid-container">
+        <div class="card grid-container translucent-form-overlay">
             <h2>Last Monster Encountered:</h2>
             <p>Rating: <span id="savedRating"></span></p>
             <p>Type: <span id="savedType"></span></p>
