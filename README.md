@@ -23,15 +23,16 @@ Upon submission of the form, the user will be directed to a new page with a mons
 - [PocketMonster Deployed Application](https://areitan.github.io/PocketMonster/)
 
 
-PocketMonster Initial Page Screenshot
+### PocketMonster Initial Page Screenshot
 
 ![PocketMonster Screenshot](./assets/images/index_screenshot.png)
 
-PocketMonster Results Page Screenshot
+### PocketMonster Results Page Screenshot
 
 ![PocketMonster Screenshot](./assets/images/randomizedresults_screenshot.png)
 
 ## Process
+---
 
 ### Wireframing
 
@@ -68,11 +69,13 @@ PocketMonster Results Page Screenshot
 
 
 ## How To Contribute
+---
 
 Suggestions are welcome.
 
 
 ## Credits
+---
 
 - [Pixabay Free Stock Photos](https://pixabay.com/)
 - [Zurb Foundation: Translucent Form Overlay](https://get.foundation/building-blocks/blocks/translucent-form-overlay.html)
