@@ -15,7 +15,6 @@ var monsterArray = [];
 var monsterParameters = [];
 var monsterResult = [];
 var monsterSpecs = { 
-    slug: "", 
     alignment: "",
     challenge_rating: "",
     size: "",
