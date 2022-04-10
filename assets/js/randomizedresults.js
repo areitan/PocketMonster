@@ -1,48 +1,20 @@
-// store monster stats
-var rating = document.getElementById("rating");
-var type = document.getElementById("type");
-var size = document.getElementById("size");
-var alignment = document.getElementById("alignment");
-var searchButton = document.getElementById("search-button");
+//Access Local Storage & Fill Values From Storage//
+var lastMonster = JSON.parse(localStorage.getItem("monster"));
+console.log(lastMonster);
 
-// Add in last monster URL to saved object
+//AC
+document.getElementsByClassName("armorClass")[0].innerHTML = lastMonster.armor_class;
 
-function saveLastMonster() {
-  // Save search form data as an object
-  var monster = {
-    rating: rating.value,
-    type: type.value,
-    size: size.value,
-    alignment: alignment.value
-  };
-  // Store object in local storage and convert to string
-  localStorage.setItem("monster", JSON.stringify(monster));
+//HP//
+document.getElementsByClassName("hitPoints")[0].innerHTML = lastMonster.hit_points;
+
+//Speed//
+var speed = lastMonster.speed
+var speedDisplay = document.getElementsByClassName("speed")[0];
+console.log(speed)
+for (var key in speed) {
+  var keyEl = document.createElement("p");
+  keyEl.innerHTML = `${key}: ${speed[key]}`;
+  console.log(keyEl);
+  speedDisplay.appendChild(keyEl);
 }
-
-function LastMonster() {
-  // Use JSON.parse() to create object
-  var lastMonster = JSON.parse(localStorage.getItem("monster"));
-  
-  if (lastMonster !== null) {
-  document.getElementById("savedRating").innerHTML = lastMonster.rating;
-  document.getElementById("savedType").innerHTML = lastMonster.type;
-  document.getElementById("savedSize").innerHTML = lastMonster.size;
-  document.getElementById("savedAlignment").innerHTML = lastMonster.alignment;
-  } else {
-    return;
-  }
-}
-
-searchButton.addEventListener("click", function(event) {
-event.preventDefault();
-saveLastMonster();
-LastMonster();
-});
-
-// The init() function on page load 
-function init() {
-  LastMonster();
-}
-
-init();
-
