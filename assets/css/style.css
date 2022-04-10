@@ -1,41 +1,81 @@
 /* Sets background image of initial page */
 .background {
-    background-image: url("https://pixabay.com/get/g95e112befaa6aafd8770f90dc6981b3173bc15d81b03e3e244d1200b039ed8dbea394efdc78fa12bba7584312ed5361d35b2ee23e9be82d140588e9eb5faec9e476dbe1e7cbefeca4933d9b16e5268ca_1920.jpg");
-    background-repeat: no-repeat;
+  background-image: url("../images/l-fantasy-gf6a0ca513_1920.jpg");
+  background-repeat: no-repeat;
 }
 
 /* Font color and shadow on headers */
-h1, h4, footer {
+h1,
+h4,
+footer {
   color: #fefefe;
   text-shadow: 1px 1px 2px black;
 }
 
 /* controls form overlay */
 .translucent-form-overlay {
-    max-width: 500px;
-    width: 100%;
-    background-color: rgba(54, 54, 54, 0.8);
-    padding: 20px;
-    color: #fefefe;
-    text-shadow: 1px 1px 2px black;
+  max-width: 500px;
+  width: 100%;
+  background-color: rgba(54, 54, 54, 0.8);
+  padding: 20px;
+  color: #fefefe;
+  text-shadow: 1px 1px 2px black;
+}
+
+.translucent-form-overlay .columns.row {
+  display: block;
+}
+
+.translucent-form-overlay input,
+.translucent-form-overlay select {
+  color: #8a8a8a;
+}
+
+.translucent-form-overlay input::-webkit-input-placeholder {
+  color: #8a8a8a;
+}
+
+.translucent-form-overlay input:-ms-input-placeholder {
+  color: #8a8a8a;
+}
+
+.translucent-form-overlay input::placeholder {
+  color: #8a8a8a;
+}
+
+/* changes background image size at different screen sizes: 5000x2830 */
+
+@media screen and (max-width: 5000px) {
+  .background {
+    background-image: url("../images/xl_fantasy-2750995.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
-  
-  .translucent-form-overlay .columns.row {
-    display: block;
+}
+
+/* changes background image size at different screen sizes: 1920x1086 */
+@media screen and (max-width: 1920px) {
+  .background {
+    background-image: url("../images/l-fantasy-gf6a0ca513_1920.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
-    
-  .translucent-form-overlay input, .translucent-form-overlay select {
-    color: #8a8a8a;
+}
+/* changes background image size at different screen sizes: 1280x724 */
+
+@media screen and (max-width: 1280px) {
+  .background {
+    background-image: url("../images/m_fantasy-ge93e0a4ca_1280.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
-  
-  .translucent-form-overlay input::-webkit-input-placeholder {
-    color: #8a8a8a;
+}
+/* changes background image size at different screen sizes: 640x362 */
+
+@media screen and (max-width: 640px) {
+  .background {
+    background-image: url("../images/s-fantasy-gd2cb1e487_640.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
-  
-  .translucent-form-overlay input:-ms-input-placeholder {
-    color: #8a8a8a;
-  }
-  
-  .translucent-form-overlay input::placeholder {
-    color: #8a8a8a;
-  }
+}
