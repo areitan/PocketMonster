@@ -15,7 +15,7 @@ var monsterArray = [];
 var monsterParameters = [];
 var monsterResult = [];
 var monsterSpecs = { 
-    slug: "aboleth", // Placeholder, should be empty
+    slug: "", 
     alignment: "",
     challenge_rating: "",
     size: "",
@@ -67,7 +67,7 @@ function getMonster() {
     .then(saveLastMonster)
     .then(saveLastSearch)
     .then(printLastSearch)
-    .then(document.location = "./randomizedresults.html")
+    .then(window.open("./randomizedresults.html", "_blank"))
 }
 
 //Local Storage Functions//
@@ -127,14 +127,3 @@ function init() {
   }
   
   init();
-
-// goqr API https://open5e.com/monsters/monster-list
-var qrURL = "https://api.qrserver.com/v1/create-qr-code/?data=https://open5e.com/monsters/" + monsterSpecs.slug + "&size=300x300&format=.svg";
-var qrGen = document.getElementById("qr");
-
-function generateQR() {
-    document.getElementById("qr");
-};
-
-// Changes src in empty <img> tag
-qrGen.src = qrURL;
