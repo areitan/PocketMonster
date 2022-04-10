@@ -127,14 +127,3 @@ function init() {
   }
   
   init();
-
-// goqr API https://open5e.com/monsters/monster-list
-var qrURL = "https://api.qrserver.com/v1/create-qr-code/?data=https://open5e.com/monsters/" + monsterSpecs.slug + "&size=300x300&format=.svg";
-var qrGen = document.getElementById("qr");
-
-function generateQR() {
-    document.getElementById("qr");
-};
-
-// Changes src in empty <img> tag
-qrGen.src = qrURL;
