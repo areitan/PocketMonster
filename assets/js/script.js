@@ -15,7 +15,6 @@ var monsterArray = [];
 var monsterParameters = [];
 var monsterResult = [];
 var monsterSpecs = { 
-    slug: "aboleth", // Placeholder, should be empty
     alignment: "",
     challenge_rating: "",
     size: "",
