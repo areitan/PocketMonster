@@ -8,7 +8,7 @@
   <title>PocketMonster</title>
   <!-- Compressed CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css"
-  crossorigin="anonymous">
+    crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
@@ -17,6 +17,8 @@
     <!--MAIN INFORMATION-->
   <main class="main grid-x">
     <div class="grid-container text-center card translucent-form-overlay">
+        <div class="">Name</div>
+        <h4 class="name text-center"></h4>
       <div class="medium-9 cell grid-x">
         <div class="ac grid-container">
           <h4 class="">AC</h4>
@@ -50,49 +52,51 @@
           <h4 class="">Alignment:</h4>
           <div class="alignment text-center"></div>
         </div>
-        </div>
       </div>
+    </div>
 
-      <!-- STAT BLOCK -->
-      <div class="grid-container text-center card translucent-form-overlay">
-        <h2 class="text-center">STATS</h2>
-        <div class="grid-container grid-x">
-          <div class="grid-container">
-            <div class="strength-text">STR</div>
-            <div class="dexterity-text">DEX</div>
-            <div class="constitution-text">CON</div>
-            <div class="charisma-text">CHA</div>
-            <div class="intelligence-text">INT</div>
-            <div class="wisdom-text">WIS</div>
-          </div>
-          <div class="grid-container">
-            <div class="strength"></div>
-            <div class="dexterity"></div>
-            <div class="constitution"></div>
-            <div class="charisma"></div>
-            <div class="intelligence"></div>
-            <div class="wisdom"></div>
-          </div>
+    <!-- STAT BLOCK -->
+    <div class="grid-container text-center card translucent-form-overlay">
+      <h2 class="text-center">STATS</h2>
+      <div class="grid-container grid-x">
+        <div class="grid-container">
+          <div class="strength-text">STR</div>
+          <div class="dexterity-text">DEX</div>
+          <div class="constitution-text">CON</div>
+          <div class="charisma-text">CHA</div>
+          <div class="intelligence-text">INT</div>
+          <div class="wisdom-text">WIS</div>
+        </div>
+        <div class="grid-container">
+          <div class="strength"></div>
+          <div class="dexterity"></div>
+          <div class="constitution"></div>
+          <div class="charisma"></div>
+          <div class="intelligence"></div>
+          <div class="wisdom"></div>
         </div>
       </div>
-      <div class="grid-container text-center card translucent-form-overlay">
-        <img class="" id="image" src="">
-        </div>
-      <div class="grid-container text-center card translucent-form-overlay">
+      
+    </div>
+    <div class="grid-container text-center card translucent-form-overlay">
+      <img class="" id="image" src="">
+      </div>
+    <div class="grid-container text-center translucent-form-overlay">
       <img class="" id="qr" src="">
-      </div>
-    </main>
-      <br/>
+    </div>
+    <br />
     <!-- SEARCH HISTORY/LOCAL STORAGE -->
     <div class="grid-container text-center card translucent-form-overlay">
       <h3>Search History</h3>
-      <ul id="monsterHistory"></ul>
+      <ul class="monsterHistory" id="monsterHistory"></ul>
     </div>
-  
-  
-  <footer class="orbit-caption text-center">PocketMonster</footer>
+  </main>
+  <br />
+  <div>
+    <footer class="text-center">PocketMonster By Room8</footer>
+  </div>
 
 </body>
 <script src="./assets/js/randomizedresults.js"></script>
-<script src="./assets/js/script.js"></script>
+
 </html>
