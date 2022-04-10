@@ -1,11 +1,13 @@
 /* Sets background image of initial page */
 .background {
-    background-image: url("https://pixabay.com/get/g3be7be38660775ff0c4601d2a1695a24229d8608df6fb4e70556e67d21e2987872ee54e708a524904a916c2520510e2f6294e57aa45982c2b823ee7f1d945faa724ef15161e0283f48fd5ada634a3411_1920.jpg");
-
+    background-image: url("https://pixabay.com/get/g95e112befaa6aafd8770f90dc6981b3173bc15d81b03e3e244d1200b039ed8dbea394efdc78fa12bba7584312ed5361d35b2ee23e9be82d140588e9eb5faec9e476dbe1e7cbefeca4933d9b16e5268ca_1920.jpg");
+    background-repeat: no-repeat;
 }
 
-h1, h4 {
-    color: aliceblue;
+/* Font color and shadow on headers */
+h1, h4, footer {
+  color: #fefefe;
+  text-shadow: 1px 1px 2px black;
 }
 
 /* controls form overlay */
@@ -15,13 +17,13 @@ h1, h4 {
     background-color: rgba(54, 54, 54, 0.8);
     padding: 20px;
     color: #fefefe;
+    text-shadow: 1px 1px 2px black;
   }
   
   .translucent-form-overlay .columns.row {
     display: block;
   }
-  
-  
+    
   .translucent-form-overlay input, .translucent-form-overlay select {
     color: #8a8a8a;
   }
