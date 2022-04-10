@@ -13,12 +13,12 @@
 </head>
 
 <body class="background">
-  <header class="relative text-center bg-white z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
-    <h1 class="monsterTitle text-center"></h1>
-  </header>
-  <!--MAIN INFORMATION-->
-  <main class="main">
+  <header class="relative text-center bg-white z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32"><h1 class="monsterTitle text-center"></h1></header>
+    <!--MAIN INFORMATION-->
+  <main class="main grid-x">
     <div class="grid-container text-center card translucent-form-overlay">
+        <div class="">Name</div>
+        <h4 class="name text-center"></h4>
       <div class="medium-9 cell grid-x">
         <div class="ac grid-container">
           <h4 class="">AC</h4>
@@ -76,7 +76,11 @@
           <div class="wisdom"></div>
         </div>
       </div>
+      
     </div>
+    <div class="grid-container text-center card translucent-form-overlay">
+      <img class="" id="image" src="">
+      </div>
     <div class="grid-container text-center translucent-form-overlay">
       <img class="" id="qr" src="">
     </div>
@@ -84,7 +88,7 @@
     <!-- SEARCH HISTORY/LOCAL STORAGE -->
     <div class="grid-container text-center card translucent-form-overlay">
       <h3>Search History</h3>
-      <ul id="monsterHistory"></ul>
+      <ul class="monsterHistory" id="monsterHistory"></ul>
     </div>
   </main>
   <br />
@@ -92,9 +96,7 @@
     <footer class="text-center">PocketMonster By Room8</footer>
   </div>
 
-
 </body>
 <script src="./assets/js/randomizedresults.js"></script>
-<script src="./assets/js/script.js"></script>
 
 </html>
